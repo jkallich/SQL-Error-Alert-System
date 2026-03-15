@@ -40,46 +40,86 @@ Using Python, SEAS connects to a database that the user specifies, and runs SQL 
 ### Description
 This version emails alerts to the user.
 
-### Structure
+[//]: # (### Structure)
 
-#### SEAS' File Directory
-> How is SEAS organized, and what purpose does each component serve? 
+[//]: # ()
+[//]: # (#### SEAS' File Directory)
 
-```
-SQL_Error_Alert_System
-│
-├── main.py
-│
-├── config/
-│   ├── __init__.py
-│   ├── database_info.py
-│   ├── 
-│   └── load_env.py
-│
-├── database/
-│   ├── __init__.py
-│   ├── connection.py
-│   └── sql_executor.py
-│
-├── alerts/
-│   ├── __init__.py
-│   ├── alert_manager.py
-│   └── email_alert.py
-│
-├── monitoring/
-│   ├── __init__.py
-│   └── error_detector.py
-│
-├── utils/
-│   ├── __init__.py
-│   ├── logger.py
-│   └── error_formatter.py
-│
-├── sql/
-│   └── job.sql
-│
-├── logs/
-│   └── error.log
-│
-└── requirements.txt
-```
+[//]: # (> How is SEAS organized, and what purpose does each component serve? )
+
+[//]: # ()
+[//]: # (```)
+
+[//]: # (SQL_Error_Alert_System)
+
+[//]: # (│)
+
+[//]: # (├── main.py)
+
+[//]: # (│)
+
+[//]: # (├── config/)
+
+[//]: # (│   ├── __init__.py)
+
+[//]: # (│   ├── database_info.py)
+
+[//]: # (│   ├── )
+
+[//]: # (│   └── load_env.py)
+
+[//]: # (│)
+
+[//]: # (├── database/)
+
+[//]: # (│   ├── __init__.py)
+
+[//]: # (│   ├── connection.py)
+
+[//]: # (│   └── sql_executor.py)
+
+[//]: # (│)
+
+[//]: # (├── alerts/)
+
+[//]: # (│   ├── __init__.py)
+
+[//]: # (│   ├── alert_manager.py)
+
+[//]: # (│   └── email_alert.py)
+
+[//]: # (│)
+
+[//]: # (├── monitoring/)
+
+[//]: # (│   ├── __init__.py)
+
+[//]: # (│   └── error_detector.py)
+
+[//]: # (│)
+
+[//]: # (├── utils/)
+
+[//]: # (│   ├── __init__.py)
+
+[//]: # (│   ├── logger.py)
+
+[//]: # (│   └── error_formatter.py)
+
+[//]: # (│)
+
+[//]: # (├── sql/)
+
+[//]: # (│   └── job.sql)
+
+[//]: # (│)
+
+[//]: # (├── logs/)
+
+[//]: # (│   └── error.log)
+
+[//]: # (│)
+
+[//]: # (└── requirements.txt)
+
+[//]: # (```)
