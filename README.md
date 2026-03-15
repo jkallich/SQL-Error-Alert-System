@@ -12,24 +12,33 @@ Ever ran a SQL script and wished that you were graced with alerts better present
 ---
 
 ## Table of Contents
-- [Highlights](#Highlights)
+
+[//]: # (- [Highlights]&#40;#Highlights&#41;)
 - [Description](#Description)
-- [Version 1](#Version 1)
+- [Version 1 [CURRENT]](#Version 1)
 
 ## Description
+Using Python, SEAS connects to a database that the user specifies, and runs SQL scripts that the user would like to run. If the script runs without error, then SEAS concludes its responsbilities with a printed notification that everything ran smoothly. If an error arises in the script, SEAS alerts the user of the error by alerting the user with information on the error through a format decided by the user.
 
+[//]: # (## Highlights)
 
-## Highlights
-> What can you expect from this Markdown??
+[//]: # (> What can you expect from this Markdown??)
 
-- [x] A  description of what each version of SEAS does
-- [x] An explanation of how to utilize of SEAS
-- [x] Future plans for SEAS
-- [x] Any important updates on SEAS
+[//]: # ()
+[//]: # (- [x] A  description of what each version of SEAS does)
 
-## Version 1 [Current]
+[//]: # (- [x] An explanation of how to utilize of SEAS)
+
+[//]: # (- [x] Future plans for SEAS)
+
+[//]: # (- [x] Any important updates on SEAS)
+
+## Version 1 
+
+> **CURRENT VERSION**
+
 ### Description
-Using Python, SEAS connects to a database that the user specifies, and runs SQL scripts that the user would like to run. If the script runs without error, then SEAS concludes its responsbilities with a printed notification that everything ran smoothly. If an error arises in the script, SEAS alerts the user of the error by emailing the user with information on the error.
+This version emails alerts to the user.
 
 ### Structure
 
