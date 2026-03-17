@@ -1,0 +1,5 @@
+# Database Connection and Email Information
+.env
+
+# Logs
+*.log

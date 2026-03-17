@@ -4,24 +4,19 @@ import logging
 ''' SET UP LOGGING SYSTEM'''
 
 # Declare file to log into
-filename = "C:\\Users\\jahna\\OneDrive\\Documents\\CS Stuff\\SQL\\SQL-Error-Alert-System\\logs\\error.log"
+log_file = "C:\\Users\\jahna\\OneDrive\\Documents\\CS Stuff\\SQL\\SQL-Error-Alert-System\\logs\\system.log"
 
-# Create logger object
-logger = logging.getLogger(__name__)
-
-# Configure logging basics
 logging.basicConfig(
-        filename=filename,
+        filename=log_file,
         encoding='utf-8',
         level=logging.DEBUG,
         format='%(asctime)s - %(levelname)s - %(filename)s - %(message)s',
         datefmt='%m-%d-%y %H:%M:%S'
 )
 
+logger = logging.getLogger(__name__)
 
-# Wrap up task
 logger.info("Logging setup complete.\n")
-
 
 # Request the user for their SQL Workbench username and password, the host they're using, the database they need to connect to, and the email they want to send alerts to.
 # for now, just using inputs and stuff.
