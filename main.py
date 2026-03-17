@@ -1,55 +1,62 @@
-import logging
+import mysql.connector
 
+import logging
+from config.settings import DB_CONFIG
+from config.settings import EMAIL_CONFIG
+from database_tools.db_connection import create_connection
 
 ''' SET UP LOGGING SYSTEM'''
 
 # Declare file to log into
-log_file = "C:\\Users\\jahna\\OneDrive\\Documents\\CS Stuff\\SQL\\SQL-Error-Alert-System\\logs\\system.log"
+LOG_FILENAME = "C:\\Users\\jahna\\OneDrive\\Documents\\CS Stuff\\SQL\\SQL-Error-Alert-System\\logs\\system.log"
+# LOG_FILENAME = "system.log"
 
+# Create logger object
+
+# Configure logging basics
 logging.basicConfig(
-        filename=log_file,
+        filename=LOG_FILENAME,
         encoding='utf-8',
         level=logging.DEBUG,
         format='%(asctime)s - %(levelname)s - %(filename)s - %(message)s',
-        datefmt='%m-%d-%y %H:%M:%S'
+        datefmt='%m-%d-%y %H:%M:%S',
+        force=True                   # must include this, as logging may have been configured in one of the imported libraries, and we want to use this configuration.
 )
 
-logger = logging.getLogger(__name__)
-
-logger.info("Logging setup complete.\n")
-
-# Request the user for their SQL Workbench username and password, the host they're using, the database they need to connect to, and the email they want to send alerts to.
-# for now, just using inputs and stuff.
+LOGGER = logging.getLogger(__name__)
 
 # Wrap up task
-logger.info("Configuration setup complete.\n")
-
-
+LOGGER.info("Logging setup complete.\n")
 
 # Connect to the database
+DB_CONNECTION = create_connection(DB_CONFIG)
 
-# Wrap up task
-logger.info("Connection to database complete.\n")
-
+LOGGER.info("Successfully connected to MySQL database.\n")
 
 # Run the SQL script(s)
 # for now, it would be prudent to just run the stuff in the sql_scripts/ directory
+CURSOR = DB_CONNECTION.cursor()
+
+CURSOR.execute("SELECT * FROM parks_and_recreation.employee_demographics;")
+result = CURSOR.fetchall()
+
+
+for row in result:
+        print(row)
 
 # Wrap up task
-logger.info("Ran SQL script.\n")
+LOGGER.info("Ran SQL script.\n")
 
 #if successful, log/print it.
 # Wrap up task
-logger.info("SQL script ran successfully.\n")
 
 # if unsuccessful, send an email with the error information
 # Wrap up task
-logger.info("SQL script ran unsuccessfully.\n")
+
 # send email
 # Wrap up task
-logger.info("Alert complete.\n")
 
 
 # Wrap up program
-logger.info("Program complete.\n------------------------------------------------------------------------------------")
+LOGGER.info("Program complete.\n------------------------------------------------------------------------------------")
 print("Program complete.")
